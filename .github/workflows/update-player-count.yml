@@ -31,7 +31,6 @@ jobs:
           echo "{\"players\": ${{ env.count }}" > player-count.json
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git pull
           git add player-count.json
           git commit -m "Update player count to ${{ env.count }}" || echo "No changes to commit"
-          git push
+          git push -f
