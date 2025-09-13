@@ -1,0 +1,36 @@
+name: Update Player Count
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # Каждую минуту
+  workflow_dispatch:       # Можно запустить вручную
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get player count
+        id: get-count
+        run: |
+          RESPONSE=$(curl -s "https://api.mcsrvstat.us/2/vedicraft.ru")
+          ONLINE=$(echo "$RESPONSE" | jq -r '.online')
+          PLAYERS=$(echo "$RESPONSE" | jq -r '.players.online')
+
+          if [ "$ONLINE" = "true" ] && [ "$PLAYERS" != "null" ]; then
+            echo "Players: $PLAYERS"
+            echo "count=$PLAYERS" >> $GITHUB_ENV
+          else
+            echo "Server offline or error"
+            echo "count=0" >> $GITHUB_ENV
+          fi
+
+      - name: Create or update player-count.json
+        run: |
+          echo "{\"players\": ${{ env.count }}" > player-count.json
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add player-count.json
+          git commit -m "Update player count to ${{ env.count }}" || echo "No changes to commit"
+          git push
