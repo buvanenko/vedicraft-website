@@ -1,0 +1,862 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: rgba(10, 15, 30, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo i {
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: #a0a0c0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4dccbd;
+}
+
+/* Hero Section */
+.hero {
+    padding: 150px 0 100px;
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(77, 204, 189, 0.1) 0%, transparent 70%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(77, 204, 189, 0.05) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+} */
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #4dccbd, #6a5af9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #c0c0e0;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.server-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    background: rgba(46, 204, 113, 0.2);
+    border-radius: 30px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    background: #2ecc71;
+    border-radius: 50%;
+    margin-right: 10px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #4dccbd, #6a5af9);
+    color: white;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.stat-card i {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #4dccbd;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #a0a0c0;
+    font-size: 0.9rem;
+}
+
+/* Features Section */
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #4dccbd, #6a5af9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-title p {
+    color: #c0c0e0;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(77, 204, 189, 0.3);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(45deg, #4dccbd, #6a5af9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #c0c0e0;
+}
+
+/* Game Modes */
+.modes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.mode-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.mode-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.mode-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mode-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.mode-survival .mode-icon {
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+}
+
+.mode-creative .mode-icon {
+    background: linear-gradient(45deg, #8e44ad, #9b59b6);
+}
+
+.mode-minigames .mode-icon {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+}
+
+.mode-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.mode-card p {
+    color: #c0c0e0;
+    margin-bottom: 20px;
+}
+
+.mode-link {
+    color: #4dccbd;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.mode-link:hover {
+    color: #6a5af9;
+}
+
+/* Community */
+.community-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+
+.community-features {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.community-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.feature-icon-large {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.feature-survival {
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+}
+
+.feature-creative {
+    background: linear-gradient(45deg, #8e44ad, #9b59b6);
+}
+
+.feature-minigames {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+}
+
+.feature-text h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.feature-text p {
+    color: #c0c0e0;
+}
+
+.news-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.news-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.news-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item:hover {
+    opacity: 0.8;
+}
+
+.news-dot {
+    width: 8px;
+    height: 8px;
+    background: #4dccbd;
+    border-radius: 50%;
+    margin-top: 8px;
+    flex-shrink: 0;
+}
+
+.news-text {
+    color: #c0c0e0;
+}
+
+/* Footer */
+footer {
+    background: rgba(10, 15, 30, 0.9);
+    padding: 60px 0 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #a0a0c0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #4dccbd;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #a0a0c0;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 120px 0 60px;
+    }
+}
+
+/* === ARTICLE PAGE STYLES === */
+
+.article-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.article-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #4dccbd, #6a5af9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.article-header p {
+    color: #c0c0e0;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.article-content {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #e0e0f0;
+    font-size: 1.1rem;
+}
+
+.article-content h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #4dccbd;
+    border-left: 5px solid #4dccbd;
+    padding-left: 15px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.article-content blockquote {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #6a5af9;
+    padding: 20px;
+    margin: 40px 0;
+    font-style: italic;
+    color: #d0d0f0;
+    border-radius: 0 10px 10px 0;
+    font-size: 1.1rem;
+}
+
+.article-content blockquote em {
+    display: block;
+    margin-top: 15px;
+    font-style: normal;
+    color: #a0a0c0;
+}
+
+.article-content code {
+    background: rgba(46, 204, 113, 0.1);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #4dccbd;
+    font-size: 0.95rem;
+}
+
+.article-back-link {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments for article */
+@media (max-width: 768px) {
+    .article-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .article-content h2 {
+        font-size: 1.6rem;
+        padding-left: 12px;
+    }
+
+    .article-content {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .article-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .article-content {
+        font-size: 0.95rem;
+    }
+
+    .article-content blockquote {
+        font-size: 1rem;
+        padding: 15px;
+    }
+}
+
+/* === NEW ELEMENTS FOR QUICKSTART PAGE === */
+
+/* Общие стили для выделенных блоков */
+.notice-box,
+.warning-box {
+    margin: 25px 0;
+    padding: 18px 20px;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    border-left: 4px solid #4dccbd;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.warning-box {
+    border-left-color: #e74c3c;
+}
+
+.warning-box strong {
+    color: #e74c3c;
+}
+
+.notice-box strong {
+    color: #4dccbd;
+}
+
+/* Стили для таблиц команд */
+.command-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.command-table th,
+.command-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.command-table th {
+    background: rgba(77, 204, 189, 0.1);
+    color: #4dccbd;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.command-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.command-table tr:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.command-table code {
+    background: rgba(46, 204, 113, 0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #2ecc71;
+    font-size: 0.95rem;
+}
+
+/* Стили для FAQ-элементов */
+.faq-item {
+    margin: 20px 0;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border-left: 3px solid #6a5af9;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-item strong {
+    color: #fff;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.faq-item br {
+    display: none;
+}
+
+/* Стили для footer-note */
+.footer-note {
+    margin: 40px 0;
+    padding: 25px;
+    background: rgba(10, 15, 30, 0.5);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.95rem;
+    color: #c0c0e0;
+    line-height: 1.8;
+}
+
+.footer-note p {
+    margin: 10px 0;
+}
+
+.footer-note a {
+    color: #4dccbd;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.footer-note a:hover {
+    color: #6a5af9;
+}
+
+/* Стили для <code> внутри текста */
+article-content code {
+    background: rgba(46, 204, 113, 0.1);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #4dccbd;
+    font-size: 0.95rem;
+    border: 1px solid rgba(77, 204, 189, 0.2);
+}
+
+/* Стили для списков в статье */
+.article-content ol,
+.article-content ul {
+    margin: 20px 0;
+    padding-left: 25px;
+}
+
+.article-content li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Улучшение внешнего вида ссылок внутри статьи */
+.article-content a {
+    color: #4dccbd;
+    text-decoration: none;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 1px dotted transparent;
+}
+
+.article-content a:hover {
+    color: #6a5af9;
+    border-bottom: 1px dotted #4dccbd;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .notice-box,
+    .warning-box,
+    .faq-item,
+    .footer-note {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+
+    .command-table {
+        font-size: 0.9rem;
+    }
+
+    .command-table th,
+    .command-table td {
+        padding: 12px 10px;
+    }
+
+    .article-content h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .notice-box,
+    .warning-box,
+    .faq-item,
+    .footer-note {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .command-table {
+        font-size: 0.85rem;
+    }
+
+    .command-table th,
+    .command-table td {
+        padding: 10px 8px;
+    }
+}
+
+/* Устранение перекрытия хедера на мобильных устройствах */
+/* Добавляем отступ сверху для всех секций, которые находятся после header */
+body {
+    padding-top: 70px; /* Высота header + немного запаса */
+}
+
+/* Но если у вас есть секции с плавающим position, нужно исключить их */
+.article-section,
+.section,
+.hero,
+.footer-content {
+    margin-top: 0;
+}
+
+/* Альтернатива: если хотите, чтобы только определённые секции имели отступ */
+.container {
+    margin-top: 0;
+}

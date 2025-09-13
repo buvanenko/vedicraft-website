@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VediCraft - Minecraft сервер</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="favicon-96.png" sizes="96x96" type="image/png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="https://vedicraft.ru" class="logo">
+                    <i class="fas fa-cubes"></i>
+                    VediCraft
+                </a>
+                <nav>
+                    <ul>
+                        
+                        <li><a href="quickstart">Быстрый старт</a></li>
+                        <li><a href="gallery">Галерея</a></li>
+                        <li><a href="donate">Донат</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Добро пожаловать в VediCraft</h1>
+            <p>Уникальный Minecraft сервер с ламповым геймплеем, дружным сообществом и регулярными событиями. Присоединяйся к нам и создай свою историю!</p>
+            
+            <!-- <div class="server-status">
+                <div class="status-indicator"></div>
+                <span>Сервер онлайн</span>
+            </div> -->
+
+            <div class="cta-buttons">
+                <a href="quickstart" class="btn btn-primary">
+                    <i class="fas fa-play"></i>
+                    Играть сейчас
+                </a>
+                <!-- <a href="#" class="btn btn-secondary">
+                    <i class="fas fa-download"></i>
+                    Скачать клиент
+                </a> -->
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-value" id="playerCount">34</div>
+                    <div class="stat-label">Игроков онлайн</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-server"></i>
+                    <div class="stat-value">1.21.8</div>
+                    <div class="stat-label">Версия</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-calendar"></i>
+                    <div class="stat-value">2025</div>
+                    <div class="stat-label">Год запуска</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <div class="stat-value">5/5</div>
+                    <div class="stat-label">Рейтинг Нового Кадила</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Почему выбирают нас?</h2>
+                <p>Мы создали уникальную атмосферу для комфортной игры каждого игрока</p>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Огромная карта</h3>
+                    <p>Регулярно расширяем границы мира</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Безопасность</h3>
+                    <p>Защита от гриферов и читеров</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Сообщество</h3>
+                    <p>Ламповое комьюнити и администраторы</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Мощное железо</h3>
+                    <p>Низкий пинг, стабильный TPS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Modes Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Особенности</h2>
+                <p>Ключевые характеристики сервера</p>
+            </div>
+
+            <div class="modes">
+                <div class="mode-card mode-survival">
+                    <div class="mode-header">
+                        <div class="mode-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Выживание</h3>
+                    </div>
+                    <p>Классический режим с полезными плагинами и уникальными возможностями</p>
+                    <a href="quickstart" class="mode-link">
+                        Подробнее <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="mode-card mode-creative">
+                    <div class="mode-header">
+                        <div class="mode-icon">
+                            <i class="fas fa-house"></i>
+                        </div>
+                        <h3>Красивый спавн</h3>
+                    </div>
+                    <p>Уникальная смесь архитектурных стилей и достопримечательностей</p>
+                    <a href="gallery" class="mode-link">
+                        Подробнее <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="mode-card mode-minigames">
+                    <div class="mode-header">
+                        <div class="mode-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3>Экономика</h3>
+                    </div>
+                    <p>Пользовательские магазины на сервере и адекватный донат</p>
+                    <a href="donate" class="mode-link">
+                        Подробнее <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наш Telegram</h2>
+                <p>Присоединяйся к сообществу игроков</p>
+            </div>
+
+            <div class="community-content">
+                <div class="community-features">
+                    <div class="community-feature">
+                        <div class="feature-icon-large feature-survival">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Связь с администрацией</h4>
+                            <p>Активное общение и поддержка 24/7</p>
+                        </div>
+                    </div>
+                    <div class="community-feature">
+                        <div class="feature-icon-large feature-creative">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>События</h4>
+                            <p>Регулярные турниры и конкурсы</p>
+                        </div>
+                    </div>
+                    <div class="community-feature">
+                        <div class="feature-icon-large feature-minigames">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Подарки</h4>
+                            <p>Скидки и розыгрыши призов</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <h3>Последние новости</h3>
+                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="vedicraft/3" data-width="100%" data-userpic="false" data-color="5A9BD7" data-dark="1"></script>
+                    <!-- <div class="news-item">
+                        <div class="news-dot"></div>
+                        <div class="news-text">Новый сезон событий начался!</div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-dot"></div>
+                        <div class="news-text">Обновление кастомных модов</div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-dot"></div>
+                        <div class="news-text">Победители турнира по строительству</div>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>VediCraft</h4>
+                    <p style="color: #a0a0c0; margin-bottom: 20px;">Уникальный Minecraft сервер с полезными плагинами и дружным сообществом.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Сервер</h4>
+                    <ul>
+                        <li><a href="#">IP: vedicraft.ru</a></li>
+                        <li><a href="#">Версия: 1.21.8</a></li>
+                        <li><a href="donate">Донат</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Сообщество</h4>
+                    <ul>
+                        <li><a href="https://t.me/vedicraft">Telegram</a></li>
+                        <li><a href="https://vk.com/newkadilo">Новое Кадило VK</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="contact">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <a href="https://minecraftrating.ru/server/vedicraft/" target="_blank"><img src="https://minecraftrating.ru/templates/theme/images/widgets/widget.png" alt="Сервер проверен MinecraftRating.ru" title="Сервер проверен MinecraftRating.ru" width="88" height="31" /></a>
+                <a href="https://mcrating.org/minecraft-server-1842" target="_blank"><img src="img/banners/mcrating.jpg" alt="Сервер проверен MCRating.org" title="Сервер проверен MCRating.org" width="88" height="31" /></a>
+                <br>
+                &copy; 2025 VediCraft. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
