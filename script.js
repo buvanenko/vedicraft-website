@@ -1,27 +1,27 @@
-// Обновление количества игроков с реального сервера
+// Обновление количества игроков из статического JSON-файла
 async function updatePlayerCount() {
     const playerCountElement = document.getElementById('playerCount');
-    const serverIP = 'vedicraft.ru'; // 🛠️ ЗАМЕНИТЕ НА СВОЙ IP!
+    const jsonUrl = 'https://buvanenko.github.io/vedicraft-website/player-count.json'; // ← ЗАМЕНИТЕ!
 
     try {
-        const response = await fetch(`https://api.mcsrvstat.us/2/${serverIP}`);
+        const response = await fetch(jsonUrl);
         const data = await response.json();
 
-        if (data.online && data.players && data.players.online !== undefined) {
-            playerCountElement.textContent = data.players.online;
+        if (data.players !== undefined) {
+            playerCountElement.textContent = data.players;
         } else {
-            playerCountElement.textContent = '0';
+            playerCountElement.textContent = '—';
         }
     } catch (error) {
-        console.error('Ошибка получения данных с сервера:', error);
+        console.error('Ошибка получения данных:', error);
         playerCountElement.textContent = '—';
     }
 }
 
-// Вызываем раз в 10 секунд
+// Обновляем каждые 10 секунд
 setInterval(updatePlayerCount, 10000);
 
-// Вызываем сразу при загрузке страницы
+// Вызываем сразу при загрузке
 updatePlayerCount();
 
 // Плавная прокрутка для навигации
@@ -60,3 +60,4 @@ document.querySelectorAll('.feature-card, .mode-card, .community-feature').forEa
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
+
