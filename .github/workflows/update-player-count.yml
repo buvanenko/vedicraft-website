@@ -28,7 +28,7 @@ jobs:
 
       - name: Create or update player-count.json
         run: |
-          echo "{\"players\": ${{ env.count }}" > player-count.json
+          echo "{\"players\": ${{ env.count }}\}" > player-count.json
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add player-count.json
