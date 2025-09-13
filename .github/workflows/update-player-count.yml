@@ -33,5 +33,4 @@ jobs:
           git config --local user.name "GitHub Action"
           git add player-count.json
           git commit -m "Update player count to ${{ env.count }}" || echo "No changes to commit"
-          git pull --rebase origin main
-          git push origin main
+          git push --force origin main
